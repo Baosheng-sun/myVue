@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>我的vue</title>
+		
+	</head>
+	<body>
+		<div id="app">
+			<input type="text" s-model="name"> 
+			<p>{{name}}</p>
+			<p>{{sex}}</p>
+			<p>{{age}}</p>
+			<p s-text="name"></p>
+			<p s-html="button"></p>
+			<button @click="handelClick">点我修改</button>
+		</div>
+		<script src="svue.js"></script>
+		<script>
+			let vm = new SVue({
+				el:'#app',
+				data:{
+					name:'valar morghulis',
+					sex:'男',
+					age:18,
+					button:'<button>我是按钮</button>'
+				},
+				
+				methods:{
+					handelClick(){
+						this.name = '云水禅心';
+						this.age = 25;
+					}
+				}
+			})
+		</script>
+	</body>
+</html>
