@@ -210,7 +210,7 @@ class SVue{
 		})
 	}
 	
-	defineReacttive(obj,key,val){
+	defineReacttive(obj, key, val){
 		// 这个方法监听data里面所有key
 		const dep = new Dep(); //每一个数据都新建一个依赖
 		Object.defineProperty(obj,key,{
